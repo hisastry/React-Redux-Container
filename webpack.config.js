@@ -26,8 +26,11 @@ module.exports = {
             include: APP_DIR,
             loader: 'babel-loader',
             query: {
-                presets: ['es2015', 'react']
+                presets: ['react']
             }
         }]
+    },
+    resolve: {
+        modules: [APP_DIR, "node_modules"]
     }
 }
