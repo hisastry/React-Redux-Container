@@ -1,10 +1,10 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
+import React from 'react';
+import App from './components/app.jsx';
 
-var App = React.createClass({
-    render: function() {
-        return <p>Template</p>
-    }
-});
+import {createStore} from 'redux'
+import reducer from 'reducers/index.js'
 
-ReactDOM.render(<App/>, document.querySelector('#app'));
+let store = createStore(reducer);
+
+ReactDOM.render(<App store={store}/>, document.querySelector('#app'));
